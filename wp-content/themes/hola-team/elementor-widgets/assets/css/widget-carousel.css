@@ -1,0 +1,583 @@
+/* Luxury carousel styling */
+.hola-carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 0 12px 40px;
+
+    .swiper-wrapper {
+        align-items: center;
+    }
+}
+
+.hola-carousel {
+    position: relative;
+    overflow: visible;
+}
+
+/* Swiper specific styles */
+/* .hola-swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 40px 0;
+} */
+
+/* .hola-carousel-item {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    width: auto !important;
+    flex: 0 0 auto;
+    margin: 0 14px !important;
+} */
+
+/* Hover effects for side slides */
+.hola-carousel-item:hover {
+    opacity: 1 !important;
+    transform: scale(0.97) !important;
+
+    .hola-icon-large {
+        background-color: #c5a065;
+        color: #fff;
+        box-shadow: 0 6px 16px rgba(197, 160, 101, 0.3);
+
+        svg {
+            path {
+                fill: white;
+            }
+        }
+    }
+}
+
+/* Card container styling */
+.hola-card-container {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 1.5rem; /* 24px */
+    padding: 2rem; /* 32px */
+    border: 1px solid #F1F5F9;
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(0, 0, 0, 0.02);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Dark mode card container */
+.hola-card-container-dark {
+    border: 1px solid #c5a06533;
+}
+
+/* Background for surface-light */
+.hola-card-container-light {
+    background-color: #FFFFFF;
+}
+
+/* Card content */
+.hola-card-content {
+    position: relative;
+    text-align: center;
+}
+
+/* Center card glow effect */
+.hola-center-card-glow {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(to bottom, rgba(197, 160, 101, 0.2) 0%, transparent 100%);
+    border-radius: 2.2rem;
+    filter: blur(40px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Side card glow effect */
+.hola-side-card-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(197, 160, 101, 0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+/* Side card glow on hover */
+.hola-carousel-side-slide:hover .hola-side-card-glow {
+    opacity: 1;
+}
+
+/* Pattern overlay */
+.hola-pattern-overlay {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 80px;
+    height: 80px;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Tag and icon container */
+.hola-tag-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Large icon styling */
+.hola-icon-large {
+    width: 60px;
+    height: 60px;
+    border-radius: 1rem;
+    background-color: #c5a0651a;
+    color: #c5a065;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    svg {
+        width: 20px;
+        height: auto;
+
+        path {
+            fill: #c5a065;
+        }
+    }
+
+    .is-center & {
+        background-color: #c5a065;
+        color: #fff;
+        box-shadow: 0 6px 16px rgba(197, 160, 101, 0.3);
+
+        svg {
+            width: 30px;
+
+            path {
+                fill: white;
+            }
+        }
+    }
+}
+
+/* Tag styling */
+.hola-tag {
+    padding: 0 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(197, 160, 101, 0.3);
+    color: #C5A065;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(197, 160, 101, 0.05);
+    letter-spacing: 0.6px;
+}
+
+/* Title styling */
+.hola-title {
+    font-size: 24px;
+    color: #0F172A;
+    margin: 0 0 1rem 0;
+
+    .is-center & {
+        font-size: 30px;
+    }
+}
+
+/* Dark mode title */
+/* .hola-title-dark {
+    color: #FFFFFF;
+} */
+
+/* Description styling */
+.hola-description {
+    color: #64748B;
+    font-size: 16px;
+    line-height: 1.6;
+
+    .is-center & {
+        font-size: 18px;
+    }
+}
+
+/* Dark mode description */
+.hola-description-dark {
+    color: #94A3B8;
+}
+
+/* Center button container */
+.hola-center-button-container {
+    margin-top: 2.5rem;
+}
+
+/* Button styling */
+.hola-button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #C5A065;
+    color: #C5A065;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+/* Button hover effect */
+.hola-button-hover:hover {
+    background-color: #C5A065;
+    color: white;
+}
+
+/* Side link container */
+.hola-side-link-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #F1F5F9;
+    display: flex;
+    align-items: center;
+    color: #C5A065;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition: all 0.5s ease;
+}
+
+/* Side link hover effect */
+.hola-carousel-side-slide:hover .hola-side-link-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navigation button styling */
+.hola-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #E2E8F0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #64748B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 20;
+    cursor: pointer;
+}
+
+/* Previous button */
+.hola-nav-prev {
+    left: -3rem;
+}
+
+/* Next button */
+.hola-nav-next {
+    right: -3rem;
+}
+
+/* Navigation button hover */
+.hola-nav-button:hover {
+    background-color: #C5A065;
+    color: white;
+    border-color: #C5A065;
+}
+
+/* Mobile nav hidden */
+.hola-nav-hidden-mobile {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hola-nav-hidden-mobile {
+        display: flex !important;
+    }
+}
+
+/* Mobile nav shown (for 3 items case) */
+.hola-nav-show-mobile {
+    display: flex !important;
+}
+
+@media (min-width: 768px) {
+    .hola-nav-show-mobile {
+        display: none !important;
+    }
+}
+
+
+
+/* Dark mode support */
+.hola-carousel-item .relative {
+    background: #FFFFFF;
+    border: 1px solid #F1F5F9;
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(0, 0, 0, 0.02);
+}
+
+.dark .hola-carousel-item .relative {
+    background: #151A23;
+    border: 1px solid #1E2532;
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.3), 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+.hola-carousel-item .font-display {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    /* text-slate-900 dark:text-white */
+    color: #0F172A;
+}
+
+.dark .hola-carousel-item .font-display {
+    color: #FFFFFF;
+}
+
+.hola-carousel-item .text-slate-500 {
+    color: #64748B;
+}
+
+.dark .hola-carousel-item .text-slate-500 {
+    color: #94A3B8;
+}
+
+.hola-carousel-item .text-primary {
+    color: #C5A065;
+}
+
+/* Center item styling */
+.hola-carousel-item .transform.md\:scale-110 {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+/* Swiper active/prev/next slide styling */
+/* .swiper-slide-active {
+    transform: scale(1.1) !important;
+    z-index: 10 !important;
+} */
+
+.swiper-slide-prev,
+.swiper-slide-next {
+    transform: scale(0.95) !important;
+    opacity: 0.8 !important;
+}
+
+/* Ensure proper z-index stacking */
+.swiper-slide {
+    z-index: 1;
+}
+
+.swiper-slide-active {
+    z-index: 20;
+}
+
+/* Adjust slide transition */
+.swiper-slide {
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.5s ease !important;
+}
+
+.hola-carousel-item .relative.z-10 .absolute.-inset-1 {
+    background: linear-gradient(to bottom, rgba(197, 160, 101, 0.2) 0%, transparent 100%);
+    border-radius: 2.2rem;
+    filter: blur(40px);
+    opacity: 0.5;
+    /* dark:opacity-30 */
+}
+
+.dark .hola-carousel-item .relative.z-10 .absolute.-inset-1 {
+    opacity: 0.3;
+}
+
+/* Hover effects */
+.hola-carousel-item.group:hover .absolute.inset-0 {
+    opacity: 1 !important;
+}
+
+.hola-carousel-item.group:hover .text-primary,
+.hola-carousel-item.group:hover .w-14,
+.hola-carousel-item.group:hover .h-14 {
+    background-color: #C5A065 !important;
+    color: white !important;
+}
+
+/* Tag styling */
+.hola-carousel-item .px-3.py-1 {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(197, 160, 101, 0.3);
+    color: #C5A065;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(197, 160, 101, 0.05);
+}
+
+/* Icon styling */
+.hola-carousel-item .w-14.h-14 {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    background-color: rgba(197, 160, 101, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    color: #C5A065;
+}
+
+.hola-carousel-item .w-16.h-16 {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, #C5A065 0%, #A88345 100%);
+    color: white;
+    box-shadow: 0 6px 16px rgba(197, 160, 101, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button styling */
+.hola-carousel-item button,
+.hola-carousel-item a {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #C5A065;
+    color: #C5A065;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hola-carousel-item button:hover,
+.hola-carousel-item a:hover {
+    background-color: #C5A065;
+    color: white;
+}
+
+/* Navigation arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem !important;
+    height: 3rem !important;
+    border-radius: 50%;
+    border: 1px solid #E2E8F0;
+    /* dark:border-slate-700 */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* dark:bg-surface-dark/80 */
+    backdrop-filter: blur(4px);
+    color: #64748B;
+    /* dark:text-slate-300 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 20;
+
+    &:after {
+        font-size: 1.5rem !important;
+        color: #64748B;
+    }
+}
+
+.dark .swiper-button-prev,
+.dark .swiper-button-next {
+    border: 1px solid #334155;
+    background-color: rgba(21, 26, 35, 0.8);
+    color: #CBD5E1;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #C5A065;
+    color: white;
+    border-color: #C5A065;
+}
+
+.swiper-button-prev {
+    left: -3rem;
+    /* lg:-ml-12 */
+}
+
+.swiper-button-next {
+    right: -3rem;
+    /* lg:-mr-12 */
+}
+
+/* Mobile indicators */
+.hola-carousel .flex.md\:hidden {
+    display: flex;
+}
+
+.hola-carousel .flex.md\:hidden .w-2.h-2 {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: #CBD5E1;
+    /* dark:bg-slate-700 */
+}
+
+.dark .hola-carousel .flex.md\:hidden .w-2.h-2 {
+    background-color: #334155;
+}
+
+.hola-carousel .flex.md\:hidden .w-8.h-2 {
+    width: 2rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: #C5A065;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .hola-carousel .flex.md:hidden {
+        display: none;
+    }
+    
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: flex !important;
+    }
+    
+    /* Ensure mobile-only arrows are hidden on desktop */
+    .hola-nav-show-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .swiper-button-prev {
+        left: -3rem;
+    }
+    
+    .swiper-button-next {
+        right: -3rem;
+    }
+}
+
+/* Perspective effect */
+.perspective-1000 {
+    perspective: 1000px;
+}

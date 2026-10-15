@@ -1,0 +1,80 @@
+/* Hola Review widget styles */
+.hola-reviews-wrapper{display:flex;gap:28px;flex-wrap:wrap}
+.hola-review-item{
+    position: relative;
+    transition: all .3s linear;
+    background:#fff;border-radius:14px;padding:28px;flex:1 1 320px;box-shadow:0 6px 18px rgba(16,24,32,0.06);
+
+    &:hover {
+        --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+        --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+}
+.hola-review-rating{margin-bottom:16px}
+.hola-star{font-size:18px;color:#cbb06b;margin-right:4px;display:inline-block;position:relative}
+.hola-star-empty{color:#e6e9ea}
+.hola-star-half{color:#cbb06b}
+.hola-review-content{font-size:18px;color:#0a1628cc;line-height:29px;margin-bottom:18px;font-style: italic;}
+.hola-review-footer{display:flex;align-items:center;gap:14px;border-top:1px solid #f0f2f3;padding-top:18px}
+.hola-review-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 2px 8px rgba(16,24,32,0.06)}
+.hola-review-author{display:flex;flex-direction:column}
+.hola-review-name{font-weight:700;color:#172227}
+.hola-review-position{color:#0a162899;font-size:14px;line-height: 20px;}
+
+.hola-review-avatar-wrap {
+    img {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.hola-star {
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.hola-star-full {
+    svg {
+        fill: #cbb06b;
+        path: #cbb06b;
+    }
+}
+
+.hola-review-quote {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: #c9a9621a;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 24px;
+        height: 24px;
+
+        path {
+            color: #c9a962;
+        }
+    }
+}
+
+@media (max-width:800px){
+    .hola-reviews-wrapper{flex-direction:column}
+}
+
+
+@media screen and (max-width: 767px) {
+    .hola-review-item {
+        flex: 1 1 100%;
+    }
+}
